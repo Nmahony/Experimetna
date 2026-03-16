@@ -50,11 +50,10 @@ export interface Place {
 }
 
 export interface PlaceWithScores extends Place {
-  upvotes: number
-  downvotes: number
-  score: number
+  vote_score: number
   visit_count: number
   comment_count: number
+  photo_count?: number
   user_vote?: number | null
   user_visited?: boolean
   user_saved?: boolean

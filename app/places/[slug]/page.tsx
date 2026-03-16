@@ -15,9 +15,7 @@ import { PhotoGallery } from '@/components/photos/PhotoGallery'
 import { PhotoUpload } from '@/components/photos/PhotoUpload'
 import { TipsList } from '@/components/tips/TipsList'
 import { TipForm } from '@/components/tips/TipForm'
-import dynamic from 'next/dynamic'
-
-const MapView = dynamic(() => import('@/components/map/MapView'), { ssr: false })
+import { PlaceDetailMap } from '@/components/map/PlaceDetailMap'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -233,12 +231,7 @@ export default async function PlacePage({ params }: Props) {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-4">Location</h2>
             <div className="h-64 rounded-xl overflow-hidden border border-gray-200">
-              <MapView
-                places={[placeAsWithScores]}
-                center={{ lat: Number(place.lat), lng: Number(place.lng) }}
-                zoom={15}
-                singlePlace
-              />
+              <PlaceDetailMap place={placeAsWithScores} />
             </div>
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}`}

@@ -1,87 +1,84 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "First Timer's Guide | PO Dads",
-  description: 'Practical advice for dads heading out with toddlers in the PO area.',
+  title: 'First Timer? Dad Guide | PO Dads',
+  description: 'A practical guide for dads taking toddlers out solo. Packing tips, changing facilities, and survival advice.',
 }
 
 const tips = [
   {
     emoji: '🎒',
-    title: "The Dad's Bag",
-    content: [
-      'Nappies (more than you think — double it)',
-      'Wet wipes (the universal tool)',
-      'Change of clothes for the toddler AND yourself',
-      'Water bottle and snacks (hungry toddlers = chaos)',
-      'Small first aid kit: plasters, antiseptic wipe, paracetamol',
-      'Sun cream and a hat in summer',
-      'Rain cover for the pushchair',
-      'A carrier/sling for when they decide to refuse the buggy',
+    title: "The Dad Bag Essentials",
+    items: [
+      "2x nappies minimum (always pack more than you think you need)",
+      "Travel changing mat — public changing tables aren't always clean",
+      "Spare clothes for the little one AND yourself (splash zone is real)",
+      "Wipes — they solve 90% of all toddler problems",
+      "Snacks: raisins, rice cakes, pouches — the holy trinity",
+      "A water bottle (yours) and a sippy cup",
+      "Sun cream in summer, waterproofs in winter",
+      "A carrier/sling for when legs give out on longer walks",
+    ],
+  },
+  {
+    emoji: '🚼',
+    title: "Baby Changing in Public",
+    items: [
+      "Most supermarkets have decent facilities — Morrisons and M&S are reliably good",
+      "Disabled toilets often have space for a changing mat when there's no dedicated room",
+      "Always use your portable mat — you'll thank yourself later",
+      "Many Wetherspoon pubs have decent facilities and are toddler-friendly until early evening",
+      "The Staunton Country Park café has excellent, clean baby-changing facilities",
+      "National Trust properties and English Heritage sites are always reliable",
+    ],
+  },
+  {
+    emoji: '👨‍👧',
+    title: "Joining Toddler Groups as a Dad",
+    items: [
+      "You belong there — it might feel weird at first but it gets easier fast",
+      "Most groups are welcoming; if yours isn't, find a different one",
+      "Nursery school drop-offs are a great way to meet other parents naturally",
+      "Look for 'dads and kids' specific sessions — libraries and children's centres often run them",
+      "PO Dads meetups are specifically for you — come along, no awkwardness",
+      "Being there makes a massive difference — the kids love it too",
+    ],
+  },
+  {
+    emoji: '🌦️',
+    title: "Handling Bad Weather",
+    items: [
+      "The weather widget on this site tells you current conditions near Waterlooville",
+      "There is no such thing as bad weather, only bad clothing (up to about 10°C)",
+      "Rain gear: waterproof all-in-one suits are life-changing for toddlers",
+      "Have a list of 3 indoor backup options ready — soft play, library, café",
+      "Fun Station and The Base are your best all-weather bets locally",
+      "Fareham Library rhyme time is free and perfect for grim Tuesday mornings",
     ],
   },
   {
     emoji: '🚗',
-    title: 'Getting There',
-    content: [
-      "Leave 15 minutes earlier than you think — toddlers don't do schedules",
-      'Look up parking before you go — nothing worse than circling with a screaming toddler',
-      'Check if there\'s a "parent and child" bay — they\'re worth it',
-      'For beaches: check the tide times. Low tide = massive beach. High tide = tiny strip',
-      'Feed them before you go, not when you get there',
-    ],
-  },
-  {
-    emoji: '👶',
-    title: 'Changing on the Go',
-    content: [
-      "Almost every major park, soft play and café has baby change now — check the 'facilities' badge on each place listing",
-      "If there's no dedicated baby change, most disabled toilets have a fold-down table",
-      "Changing mat in the bag at all times — surfaces you find in the wild can be grim",
-      "Keep a disposable bag for nappy disposal when bins are miles away",
-    ],
-  },
-  {
-    emoji: '🤝',
-    title: "Joining Toddler Groups as a Dad",
-    content: [
-      "Walk in like you own the place — confidence is everything",
-      'Most groups are run by mums but they\'re always delighted to see dads — you\'ll get a warm welcome',
-      "Get there early and bag a spot near the toy kitchen — toddlers love it and it gives you something to do while they play",
-      "Don't force your toddler to interact — let them warm up in their own time",
-      "Library Rhyme Time is one of the best free sessions and has a brilliant dad-friendly atmosphere",
-      "Say hi to the other adults — most are just as grateful for conversation",
-    ],
-  },
-  {
-    emoji: '☀️',
-    title: 'Outdoor Days Made Easy',
-    content: [
-      "Let them walk wherever possible — it wears them out and they sleep better",
-      'Pack a picnic blanket — sitting on wet grass is grim, and it doubles as a fort',
-      "Puddles are not the enemy — waterproof trousers are £8 from Lidl and they'll wear them every day",
-      "Give them a mission: spotting birds, collecting leaves, finding the 'biggest stick'",
-      'Built-in play equipment near cafes = you can have a hot drink while they play. Win.',
-    ],
-  },
-  {
-    emoji: '🏠',
-    title: 'Rainy Day Survival',
-    content: [
-      "Soft play on a Tuesday morning = empty. Soft play on a Saturday = chaos. Plan accordingly",
-      "Libraries are completely free and most run story/rhyme sessions",
-      "Museums are free for under-5s and often have hands-on exhibits at toddler height",
-      "The weather in Hampshire isn't that bad — invest in proper waterproofs and embrace it",
+    title: "Getting Out of the House",
+    items: [
+      "Set a departure time and treat it like a deadline — momentum is everything",
+      "Pack the bag the night before, not the morning of",
+      "Lower your expectations: a 45-minute outing is a win",
+      "The car park at QECP can be busy on weekends — arrive before 10am",
+      "Sandy Point and Hill Head beach parking is much quieter on weekday mornings",
+      "If it goes wrong, leave. There will be another day.",
     ],
   },
   {
     emoji: '💬',
-    title: 'Building Your Dad Crew',
-    content: [
-      "PO Dads Forum is the best place to start — introduce yourself in the Introductions section",
-      "Organise or join a meetup — showing up once builds connections that last",
-      "WhatsApp groups form naturally from meetups — don't be afraid to share yours",
-      "Most dads are in the same boat and just as keen to connect — just ask",
+    title: "Mental Health & Connection",
+    items: [
+      "Isolation is real for dads too — it's okay to admit that",
+      "The forum on this site is low-pressure and supportive",
+      "Arranging a meetup is easier than it sounds — even one other dad is enough",
+      "Most dads feel exactly like you do but don't say it — be the one who does",
+      "A morning out resets everything — for you and the little one",
+      "You're doing great, even on the days it doesn't feel like it",
     ],
   },
 ]
@@ -89,27 +86,28 @@ const tips = [
 export default function GuidePage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
+      {/* Hero */}
       <div className="text-center mb-12">
-        <span className="text-5xl">🌳</span>
-        <h1 className="text-4xl font-bold mt-4 mb-3">First Timer's Guide</h1>
-        <p className="text-[var(--muted)] text-lg max-w-xl mx-auto">
-          Practical advice for dads heading out with toddlers in the Waterlooville,
-          Havant and Fareham area. No fluff — just what actually works.
+        <span className="text-6xl block mb-4">🌿</span>
+        <h1 className="text-4xl font-black text-gray-900 mb-3">The Dad's Survival Guide</h1>
+        <p className="text-gray-500 text-lg max-w-xl mx-auto">
+          First time out solo with your toddler? No worries. Here's everything you actually need to know.
         </p>
       </div>
 
+      {/* Tips sections */}
       <div className="space-y-8">
         {tips.map(section => (
-          <div key={section.title} className="bg-[var(--card)] rounded-2xl border border-[var(--border)] p-6">
-            <h2 className="text-xl font-bold flex items-center gap-2 mb-4">
-              <span className="text-2xl">{section.emoji}</span>
-              {section.title}
-            </h2>
-            <ul className="space-y-2">
-              {section.content.map((tip, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm">
-                  <span className="text-[var(--primary)] mt-0.5 flex-shrink-0">✓</span>
-                  <span>{tip}</span>
+          <div key={section.title} className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
+            <div className="bg-[#2d6a4f] px-6 py-4 flex items-center gap-3">
+              <span className="text-3xl">{section.emoji}</span>
+              <h2 className="text-xl font-black text-white">{section.title}</h2>
+            </div>
+            <ul className="divide-y divide-gray-50">
+              {section.items.map((item, i) => (
+                <li key={i} className="flex items-start gap-3 px-6 py-4">
+                  <span className="text-[#2d6a4f] font-bold mt-0.5 text-sm">{i + 1}.</span>
+                  <p className="text-gray-700 text-sm leading-relaxed">{item}</p>
                 </li>
               ))}
             </ul>
@@ -117,18 +115,23 @@ export default function GuidePage() {
         ))}
       </div>
 
-      <div className="mt-12 bg-[#2d6a4f] rounded-2xl p-8 text-white text-center">
-        <h2 className="text-2xl font-bold mb-3">Know something we don't?</h2>
-        <p className="opacity-80 mb-6">
-          Share your wisdom with other dads — add a place, leave a tip, or jump into the forum.
-        </p>
-        <div className="flex flex-wrap gap-3 justify-center">
-          <a href="/places/add" className="bg-white text-[#2d6a4f] rounded-xl px-5 py-2.5 font-semibold text-sm hover:bg-gray-100 transition-colors">
-            Add a place
-          </a>
-          <a href="/forum/new" className="bg-white/20 text-white rounded-xl px-5 py-2.5 font-semibold text-sm hover:bg-white/30 transition-colors">
-            Join the forum
-          </a>
+      {/* CTA */}
+      <div className="mt-12 bg-[#2d6a4f] text-white rounded-2xl p-8 text-center">
+        <h2 className="text-2xl font-black mb-2">Ready to get out there?</h2>
+        <p className="text-white/70 mb-6">Find the best toddler spots in Waterlooville, Havant and Fareham.</p>
+        <div className="flex flex-wrap justify-center gap-3">
+          <Link
+            href="/places"
+            className="bg-[#f59e0b] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#d97706] transition-colors"
+          >
+            Browse Places
+          </Link>
+          <Link
+            href="/meetups"
+            className="bg-white/20 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/30 transition-colors border border-white/20"
+          >
+            Find Meetups
+          </Link>
         </div>
       </div>
     </div>

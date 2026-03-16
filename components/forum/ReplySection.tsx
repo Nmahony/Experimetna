@@ -110,7 +110,7 @@ export function ReplySection({ threadId, locked, initialReplies, currentUserId }
         ) : (
           <div className="bg-[var(--muted-bg)] rounded-xl p-6 text-center">
             <p className="text-[var(--muted)] mb-3">Sign in to join the conversation</p>
-            <Button asChild><Link href="/auth/login">Join the crew</Link></Button>
+            <Link href="/auth/login" className="inline-flex items-center bg-[#2d6a4f] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#1b4332] transition-colors">Join the crew</Link>
           </div>
         )
       )}

@@ -60,7 +60,7 @@ export function PhotoSection({ placeId, photos: initialPhotos, currentUserId }: 
       ) : (
         <div className="bg-[var(--muted-bg)] rounded-xl p-4 text-center">
           <p className="text-[var(--muted)] text-sm mb-2">Sign in to share photos</p>
-          <Button asChild size="sm"><Link href="/auth/login">Join the crew</Link></Button>
+          <Link href="/auth/login" className="inline-flex items-center bg-[#2d6a4f] text-white px-3 py-1.5 rounded-lg text-sm font-semibold hover:bg-[#1b4332] transition-colors">Join the crew</Link>
         </div>
       )}
 
