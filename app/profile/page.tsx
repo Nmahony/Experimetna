@@ -1,97 +1,222 @@
-import { createClient } from '@/lib/supabase/server'
-import { redirect } from 'next/navigation'
-import { PlaceGrid } from '@/components/places/PlaceGrid'
-import { ForumThreadList } from '@/components/forum/ForumThreadList'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
-import type { Metadata } from 'next'
+'use client'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { Edit2, MapPin, LogOut } from 'lucide-react'
+import { createClient } from '@/lib/supabase/client'
+import { PlaceCard } from '@/components/places/PlaceCard'
+import { ThreadCard } from '@/components/forum/ThreadCard'
+import { EmptyState } from '@/components/shared/EmptyState'
+import { LoadingSpinner } from '@/components/shared/LoadingSpinner'
 
-export const metadata: Metadata = { title: 'My Profile | PO Dads' }
+type Tab = 'visited' | 'saved' | 'places' | 'forum'
 
-export default async function ProfilePage() {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/auth/login?redirectTo=/profile')
+export default function ProfilePage() {
+  const [user, setUser] = useState<any>(null)
+  const [profile, setProfile] = useState<any>(null)
+  const [loading, setLoading] = useState(true)
+  const [tab, setTab] = useState<Tab>('visited')
+  const [visitedPlaces, setVisitedPlaces] = useState<any[]>([])
+  const [savedPlaces, setSavedPlaces] = useState<any[]>([])
+  const [myPlaces, setMyPlaces] = useState<any[]>([])
+  const [myThreads, setMyThreads] = useState<any[]>([])
+  const router = useRouter()
+  const supabase = createClient()
 
-  const [profileRes, visitedRes, savedRes, threadsRes] = await Promise.all([
-    supabase.from('profiles').select('*').eq('id', user.id).single(),
-    supabase.from('visited').select('places_with_scores(*, categories(*))').eq('user_id', user.id).order('created_at', { ascending: false }),
-    supabase.from('saved_places').select('places_with_scores(*, categories(*))').eq('user_id', user.id).order('created_at', { ascending: false }),
-    supabase.from('forum_threads').select('*, profiles(username, display_name, avatar_url)').eq('author_id', user.id).order('created_at', { ascending: false }),
-  ])
+  useEffect(() => {
+    supabase.auth.getUser().then(async ({ data: { user } }) => {
+      if (!user) { router.push('/auth/login'); return }
+      setUser(user)
 
-  const profile = profileRes.data
-  const visitedPlaces = (visitedRes.data || []).map((r: any) => r.places_with_scores).filter(Boolean)
-  const savedPlaces = (savedRes.data || []).map((r: any) => r.places_with_scores).filter(Boolean)
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('id', user.id)
+        .single()
+      setProfile(profile)
+
+      const [
+        { data: visited },
+        { data: saved },
+        { data: places },
+        { data: threads },
+      ] = await Promise.all([
+        supabase
+          .from('visited')
+          .select('place_id, places_with_scores(*, categories(*))')
+          .eq('user_id', user.id)
+          .order('created_at', { ascending: false }),
+        supabase
+          .from('saved_places')
+          .select('place_id, places_with_scores(*, categories(*))')
+          .eq('user_id', user.id)
+          .order('created_at', { ascending: false }),
+        supabase
+          .from('places_with_scores')
+          .select('*, categories(*)')
+          .eq('submitted_by', user.id)
+          .order('created_at', { ascending: false }),
+        supabase
+          .from('forum_threads')
+          .select('*, profiles(id, display_name, avatar_url)')
+          .eq('author_id', user.id)
+          .order('created_at', { ascending: false }),
+      ])
+
+      setVisitedPlaces(visited?.map((v: any) => v.places_with_scores).filter(Boolean) ?? [])
+      setSavedPlaces(saved?.map((s: any) => s.places_with_scores).filter(Boolean) ?? [])
+      setMyPlaces(places ?? [])
+      setMyThreads(threads ?? [])
+      setLoading(false)
+    })
+  }, [])
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut()
+    router.push('/')
+  }
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-96">
+        <LoadingSpinner size="lg" />
+      </div>
+    )
+  }
+
+  const initials = profile?.display_name
+    ? profile.display_name.split(' ').map((n: string) => n[0]).join('').toUpperCase().slice(0, 2)
+    : user?.email?.[0]?.toUpperCase() ?? '?'
+
+  const tabs: { id: Tab; label: string; count: number }[] = [
+    { id: 'visited', label: 'Visited', count: visitedPlaces.length },
+    { id: 'saved', label: 'Saved', count: savedPlaces.length },
+    { id: 'places', label: 'My Places', count: myPlaces.length },
+    { id: 'forum', label: 'Forum', count: myThreads.length },
+  ]
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       {/* Profile header */}
-      <div className="bg-[var(--card)] rounded-2xl border border-[var(--border)] p-6 mb-8">
-        <div className="flex items-center gap-4">
-          <div className="h-16 w-16 rounded-full bg-[var(--primary)] flex items-center justify-center text-white text-2xl font-bold">
-            {(profile?.display_name || profile?.username || 'D')[0].toUpperCase()}
-          </div>
-          <div>
-            <h1 className="text-2xl font-bold">{profile?.display_name || profile?.username || 'Dad'}</h1>
-            {profile?.area && <p className="text-[var(--muted)] text-sm">📍 {profile.area}</p>}
-            {profile?.kids_ages && profile.kids_ages.length > 0 && (
-              <p className="text-sm mt-1">
-                👶 Kids: {profile.kids_ages.join(', ')}
-              </p>
+      <div className="bg-white rounded-2xl border border-gray-100 p-6 mb-6">
+        <div className="flex items-start justify-between">
+          <div className="flex items-center gap-4">
+            {profile?.avatar_url ? (
+              <img src={profile.avatar_url} alt="" className="w-16 h-16 rounded-full object-cover" />
+            ) : (
+              <div className="w-16 h-16 rounded-full bg-[#2d6a4f] text-white flex items-center justify-center text-2xl font-black">
+                {initials}
+              </div>
             )}
+            <div>
+              <h1 className="text-2xl font-black text-gray-900">{profile?.display_name ?? 'Dad'}</h1>
+              {profile?.area && (
+                <p className="text-gray-500 text-sm flex items-center gap-1 mt-0.5">
+                  <MapPin size={13} /> {profile.area}
+                </p>
+              )}
+              {profile?.bio && (
+                <p className="text-gray-600 text-sm mt-2 max-w-md">{profile.bio}</p>
+              )}
+              {profile?.kids_ages && profile.kids_ages.length > 0 && (
+                <p className="text-xs text-gray-400 mt-1">
+                  Kids: {profile.kids_ages.join(', ')}
+                </p>
+              )}
+            </div>
+          </div>
+          <div className="flex gap-2">
+            <button className="flex items-center gap-1.5 border border-gray-200 text-gray-600 px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+              <Edit2 size={13} /> Edit
+            </button>
+            <button
+              onClick={handleLogout}
+              className="flex items-center gap-1.5 border border-red-200 text-red-600 px-3 py-2 rounded-lg text-sm font-medium hover:bg-red-50 transition-colors"
+            >
+              <LogOut size={13} /> Log out
+            </button>
           </div>
         </div>
-        {profile?.bio && <p className="text-sm mt-4 text-[var(--muted)]">{profile.bio}</p>}
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-3 gap-4 mb-8">
-        {[
-          { label: 'Visited', value: visitedPlaces.length, icon: '✅' },
-          { label: 'Saved', value: savedPlaces.length, icon: '🔖' },
-          { label: 'Threads', value: threadsRes.data?.length || 0, icon: '💬' },
-        ].map(({ label, value, icon }) => (
-          <div key={label} className="bg-[var(--card)] rounded-xl border border-[var(--border)] p-4 text-center">
-            <div className="text-2xl mb-1">{icon}</div>
-            <div className="text-2xl font-bold">{value}</div>
-            <div className="text-xs text-[var(--muted)]">{label}</div>
-          </div>
+      {/* Tabs */}
+      <div className="flex gap-1 mb-6 bg-gray-100 rounded-xl p-1">
+        {tabs.map(t => (
+          <button
+            key={t.id}
+            onClick={() => setTab(t.id)}
+            className={`flex-1 py-2 rounded-lg text-sm font-semibold transition-all ${
+              tab === t.id
+                ? 'bg-white text-gray-900 shadow-sm'
+                : 'text-gray-500 hover:text-gray-700'
+            }`}
+          >
+            {t.label}
+            {t.count > 0 && (
+              <span className="ml-1.5 text-xs bg-[#2d6a4f] text-white rounded-full px-1.5 py-0.5">
+                {t.count}
+              </span>
+            )}
+          </button>
         ))}
       </div>
 
-      <Tabs defaultValue="visited">
-        <TabsList>
-          <TabsTrigger value="visited">Visited ({visitedPlaces.length})</TabsTrigger>
-          <TabsTrigger value="saved">Saved ({savedPlaces.length})</TabsTrigger>
-          <TabsTrigger value="threads">My Threads ({threadsRes.data?.length || 0})</TabsTrigger>
-        </TabsList>
-
-        <TabsContent value="visited">
-          {visitedPlaces.length > 0 ? (
-            <PlaceGrid places={visitedPlaces} />
+      {/* Tab content */}
+      {tab === 'visited' && (
+        <div>
+          {visitedPlaces.length === 0 ? (
+            <EmptyState icon="🗺️" title="No visited places yet" description="Mark places as visited when you go!" />
           ) : (
-            <div className="text-center py-12 text-[var(--muted)]">
-              <p className="text-4xl mb-3">🗺️</p>
-              <p>No places visited yet — get out there!</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {visitedPlaces.map(p => <PlaceCard key={p.id} place={p} />)}
             </div>
           )}
-        </TabsContent>
+        </div>
+      )}
 
-        <TabsContent value="saved">
-          {savedPlaces.length > 0 ? (
-            <PlaceGrid places={savedPlaces} />
+      {tab === 'saved' && (
+        <div>
+          {savedPlaces.length === 0 ? (
+            <EmptyState icon="🔖" title="No saved places" description="Save places to visit later!" />
           ) : (
-            <div className="text-center py-12 text-[var(--muted)]">
-              <p className="text-4xl mb-3">🔖</p>
-              <p>No saved places yet. Bookmark the ones you want to visit.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {savedPlaces.map(p => <PlaceCard key={p.id} place={p} />)}
             </div>
           )}
-        </TabsContent>
+        </div>
+      )}
 
-        <TabsContent value="threads">
-          <ForumThreadList threads={threadsRes.data || []} />
-        </TabsContent>
-      </Tabs>
+      {tab === 'places' && (
+        <div>
+          {myPlaces.length === 0 ? (
+            <EmptyState
+              icon="📍"
+              title="You haven't added any places"
+              action={<Link href="/places/add" className="bg-[#2d6a4f] text-white px-5 py-2.5 rounded-xl font-semibold text-sm">Add a Place</Link>}
+            />
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {myPlaces.map(p => <PlaceCard key={p.id} place={p} />)}
+            </div>
+          )}
+        </div>
+      )}
+
+      {tab === 'forum' && (
+        <div>
+          {myThreads.length === 0 ? (
+            <EmptyState
+              icon="💬"
+              title="No forum posts yet"
+              action={<Link href="/forum/new" className="bg-[#2d6a4f] text-white px-5 py-2.5 rounded-xl font-semibold text-sm">Start a Thread</Link>}
+            />
+          ) : (
+            <div className="space-y-2">
+              {myThreads.map(t => <ThreadCard key={t.id} thread={t} />)}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }
