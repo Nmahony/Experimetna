@@ -1,0 +1,173 @@
+[
+  {
+    "id": "766a00b2-b092-488f-9cef-6127d92dd2ea",
+    "initials": "CA",
+    "fullName": "Dr CA (placeholder name)",
+    "grade": "CONSULTANT",
+    "ftePercent": 100,
+    "color": "#f97316",
+    "active": true
+  },
+  {
+    "id": "55df0651-1c07-4529-a693-e5e70c66a40c",
+    "initials": "MG",
+    "fullName": "Dr MG (placeholder name)",
+    "grade": "CONSULTANT",
+    "ftePercent": 100,
+    "color": "#3b82f6",
+    "active": true
+  },
+  {
+    "id": "5c92a623-dd85-444b-b142-65dfdb1cb12e",
+    "initials": "EB",
+    "fullName": "Dr EB (placeholder name)",
+    "grade": "CONSULTANT",
+    "ftePercent": 80,
+    "color": "#22c55e",
+    "active": true
+  },
+  {
+    "id": "ef666a18-eca0-4cd4-88f5-067cae31fb51",
+    "initials": "DR",
+    "fullName": "Dr DR (placeholder name)",
+    "grade": "CONSULTANT",
+    "ftePercent": 100,
+    "color": "#a855f7",
+    "active": true
+  },
+  {
+    "id": "243ea376-4e3f-4d03-8b30-fd36de392a32",
+    "initials": "RA",
+    "fullName": "Dr RA (placeholder name)",
+    "grade": "CONSULTANT",
+    "ftePercent": 60,
+    "color": "#ef4444",
+    "active": true
+  },
+  {
+    "id": "1b725ef4-9672-47e0-9692-18aba9054052",
+    "initials": "HD",
+    "fullName": "Dr HD (placeholder name)",
+    "grade": "CONSULTANT",
+    "ftePercent": 100,
+    "color": "#14b8a6",
+    "active": true
+  },
+  {
+    "id": "bb571842-f00b-4036-be6a-1d1118d06142",
+    "initials": "GM",
+    "fullName": "Dr GM (placeholder name)",
+    "grade": "CONSULTANT",
+    "ftePercent": 100,
+    "color": "#eab308",
+    "active": true
+  },
+  {
+    "id": "710b0c30-d427-4744-9cfc-c321ad682a23",
+    "initials": "SK",
+    "fullName": "Dr SK (placeholder name)",
+    "grade": "CONSULTANT",
+    "ftePercent": 80,
+    "color": "#ec4899",
+    "active": true
+  },
+  {
+    "id": "5d7ef368-64fb-43ca-92f4-500b5537ebcf",
+    "initials": "TEC",
+    "fullName": "Dr TEC (placeholder name)",
+    "grade": "REGISTRAR",
+    "ftePercent": 100,
+    "color": "#6366f1",
+    "active": true
+  },
+  {
+    "id": "000a4a53-0617-4b8c-b613-fb1543711fec",
+    "initials": "RC",
+    "fullName": "Dr RC (placeholder name)",
+    "grade": "REGISTRAR",
+    "ftePercent": 100,
+    "color": "#84cc16",
+    "active": true
+  },
+  {
+    "id": "a756348f-89f0-4e0d-af19-1800a980d9e6",
+    "initials": "HJ",
+    "fullName": "Dr HJ (placeholder name)",
+    "grade": "REGISTRAR",
+    "ftePercent": 100,
+    "color": "#06b6d4",
+    "active": true
+  },
+  {
+    "id": "61fd73b5-0bb2-408a-9b6b-0d88dac251df",
+    "initials": "AB",
+    "fullName": "Dr AB (placeholder name)",
+    "grade": "REGISTRAR",
+    "ftePercent": 100,
+    "color": "#f43f5e",
+    "active": true
+  },
+  {
+    "id": "322db3f5-443f-469b-bc09-c9a43cd11d47",
+    "initials": "KM",
+    "fullName": "Dr KM (placeholder name)",
+    "grade": "REGISTRAR",
+    "ftePercent": 100,
+    "color": "#8b5cf6",
+    "active": true
+  },
+  {
+    "id": "9cb41622-11ad-47b0-b821-e769d2e2d751",
+    "initials": "BM",
+    "fullName": "Dr BM (placeholder name)",
+    "grade": "REGISTRAR",
+    "ftePercent": 100,
+    "color": "#10b981",
+    "active": true
+  },
+  {
+    "id": "55bde6a3-055d-4b78-a04c-be30c13e8526",
+    "initials": "IJ",
+    "fullName": "Dr IJ (placeholder name)",
+    "grade": "REGISTRAR",
+    "ftePercent": 50,
+    "color": "#d946ef",
+    "active": true
+  },
+  {
+    "id": "07d1bf0d-fd44-47c1-adcb-9675e20b9fdf",
+    "initials": "JY",
+    "fullName": "Dr JY (placeholder name)",
+    "grade": "REGISTRAR",
+    "ftePercent": 100,
+    "color": "#0ea5e9",
+    "active": true
+  },
+  {
+    "id": "528fa113-171c-4926-83eb-6d60c69ea61b",
+    "initials": "PC",
+    "fullName": "Dr PC (placeholder name)",
+    "grade": "SPR",
+    "ftePercent": 100,
+    "color": "#f59e0b",
+    "active": true
+  },
+  {
+    "id": "8c73f153-3179-4616-9fd2-08c8fe1bdf74",
+    "initials": "ML",
+    "fullName": "Dr ML (placeholder name)",
+    "grade": "SPR",
+    "ftePercent": 100,
+    "color": "#64748b",
+    "active": true
+  },
+  {
+    "id": "874d0c9e-14fd-40ce-bd81-b6882c232721",
+    "initials": "SS",
+    "fullName": "Dr SS (placeholder name)",
+    "grade": "SHO",
+    "ftePercent": 100,
+    "color": "#65a30d",
+    "active": true
+  }
+]

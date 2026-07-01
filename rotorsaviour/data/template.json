@@ -1,0 +1,233 @@
+{
+  "name": "Haematology Rota",
+  "columns": [
+    {
+      "id": "8eb7f47c-c8d9-48d6-aafe-a914bdb6168a",
+      "section": "AM CLINIC",
+      "label": "Clinic 1",
+      "order": 0
+    },
+    {
+      "id": "08727041-5dcb-48b0-80ca-0f5f45e95db6",
+      "section": "AM CLINIC",
+      "label": "Clinic 2",
+      "order": 1
+    },
+    {
+      "id": "5a81e7b8-2824-4465-85bd-999cc299c596",
+      "section": "AM CLINIC",
+      "label": "Clinic 3",
+      "order": 2
+    },
+    {
+      "id": "b2424c06-2efb-471f-a5e0-9c61e2c83d6e",
+      "section": "AM CLINIC",
+      "label": "Clinic 4",
+      "order": 3
+    },
+    {
+      "id": "01f9c505-d1c7-4d83-8185-b1ebadeed6ff",
+      "section": "AM CLINIC",
+      "label": "Clinic 5",
+      "order": 4
+    },
+    {
+      "id": "45c3d663-5403-414c-8607-98d29a27feec",
+      "section": "AM CLINIC SUPPORT",
+      "label": "Support 1",
+      "order": 5
+    },
+    {
+      "id": "070fef76-2bf6-4fad-9e35-731d81c15e4e",
+      "section": "AM CLINIC SUPPORT",
+      "label": "Support 2",
+      "order": 6
+    },
+    {
+      "id": "fafb3400-0496-4dac-a0b6-4f5d45d278de",
+      "section": "AM CLINIC SUPPORT",
+      "label": "Support 3",
+      "order": 7
+    },
+    {
+      "id": "634b8ea5-559d-4eca-be0e-a5f30ed99414",
+      "section": "AM CLINIC SUPPORT",
+      "label": "Support 4",
+      "order": 8
+    },
+    {
+      "id": "11b1ad43-1274-4b9d-8139-f58bd7c87a11",
+      "section": "THROMBOSIS",
+      "label": "Throm",
+      "order": 9
+    },
+    {
+      "id": "68d86741-d374-47ae-844e-b96c62cb6fe5",
+      "section": "PM CLINIC",
+      "label": "CONS",
+      "order": 10,
+      "eligibleGrades": [
+        "CONSULTANT"
+      ]
+    },
+    {
+      "id": "a2e32d11-a185-4fbf-a113-fbbfdbc19ccb",
+      "section": "PM CLINIC",
+      "label": "REG",
+      "order": 11,
+      "eligibleGrades": [
+        "REGISTRAR",
+        "SPR",
+        "SHO"
+      ]
+    },
+    {
+      "id": "ff33c7f1-e119-4122-8e23-2510efc9a2e5",
+      "section": "LYMPHOMA",
+      "label": "CONS",
+      "order": 12,
+      "eligibleGrades": [
+        "CONSULTANT"
+      ]
+    },
+    {
+      "id": "28b97913-883c-47bb-bedf-9f27dc904e7d",
+      "section": "LYMPHOMA",
+      "label": "REG",
+      "order": 13,
+      "eligibleGrades": [
+        "REGISTRAR",
+        "SPR",
+        "SHO"
+      ]
+    },
+    {
+      "id": "4bfffc6e-d7c4-4203-8c0f-63da28f2b397",
+      "section": "WARD",
+      "label": "CONS",
+      "order": 14,
+      "eligibleGrades": [
+        "CONSULTANT"
+      ]
+    },
+    {
+      "id": "6b599948-c525-4d0c-9e97-d8fa3bdc3dce",
+      "section": "WARD",
+      "label": "REG",
+      "order": 15,
+      "eligibleGrades": [
+        "REGISTRAR",
+        "SPR",
+        "SHO"
+      ]
+    },
+    {
+      "id": "8fd9da8d-b351-444f-968c-e669c774bed4",
+      "section": "WARD",
+      "label": "BM Bx",
+      "order": 16
+    },
+    {
+      "id": "0b3cf660-1b2e-4d81-9734-a85412a076ce",
+      "section": "OUTLIERS",
+      "label": "CONS",
+      "order": 17,
+      "eligibleGrades": [
+        "CONSULTANT"
+      ]
+    },
+    {
+      "id": "b0cea0d8-0e0d-4841-aa10-cbbc270eefef",
+      "section": "OUTLIERS",
+      "label": "REG",
+      "order": 18,
+      "eligibleGrades": [
+        "REGISTRAR",
+        "SPR",
+        "SHO"
+      ]
+    },
+    {
+      "id": "65481fbc-fb35-4ea5-810d-5877bdd5728a",
+      "section": "BLEEP 1915",
+      "label": "CON",
+      "order": 19,
+      "eligibleGrades": [
+        "CONSULTANT"
+      ]
+    },
+    {
+      "id": "f522941f-c575-4c6c-8874-a1188e5b3d6b",
+      "section": "BLEEP 1915",
+      "label": "REG",
+      "order": 20,
+      "eligibleGrades": [
+        "REGISTRAR",
+        "SPR",
+        "SHO"
+      ]
+    },
+    {
+      "id": "ef20075a-e91b-47bc-ab3a-1a01dc7704ce",
+      "section": "LAB",
+      "label": "Lab",
+      "order": 21
+    },
+    {
+      "id": "fca4fb8a-dbab-4a0a-9aed-eba4d0cf6076",
+      "section": "BM BIOPSY / REPORT",
+      "label": "Biopsy",
+      "order": 22
+    },
+    {
+      "id": "cffce943-9ca6-4ca2-82ba-7e82a1c137e1",
+      "section": "BM BIOPSY / REPORT",
+      "label": "Report",
+      "order": 23
+    },
+    {
+      "id": "5d3eaba0-9e79-4dbf-8f5d-080c86c3b6c8",
+      "section": "ON CALL",
+      "label": "CONS",
+      "order": 24,
+      "eligibleGrades": [
+        "CONSULTANT"
+      ]
+    },
+    {
+      "id": "5e5d6d67-fcba-47e6-aa40-4315b03a9d28",
+      "section": "ON CALL",
+      "label": "REG",
+      "order": 25,
+      "eligibleGrades": [
+        "REGISTRAR",
+        "SPR",
+        "SHO"
+      ]
+    },
+    {
+      "id": "0fc41f36-9ac3-4e93-9e79-3934c7bc785e",
+      "section": "LEAVE",
+      "label": "Annual (½)",
+      "order": 26
+    },
+    {
+      "id": "f83e7e56-1f30-48b5-b3a1-529b9d1f61ac",
+      "section": "LEAVE",
+      "label": "Other",
+      "order": 27
+    },
+    {
+      "id": "37eaa79a-eed9-42e9-a362-61006afafe96",
+      "section": "SPA / NOT AT WORK",
+      "label": "AM",
+      "order": 28
+    },
+    {
+      "id": "4ad37523-ad24-4133-b309-e944763e8b80",
+      "section": "SPA / NOT AT WORK",
+      "label": "PM",
+      "order": 29
+    }
+  ]
+}

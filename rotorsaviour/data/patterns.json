@@ -1,0 +1,695 @@
+[
+  {
+    "staffId": "766a00b2-b092-488f-9cef-6127d92dd2ea",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "55df0651-1c07-4529-a693-e5e70c66a40c",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "5c92a623-dd85-444b-b142-65dfdb1cb12e",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "ef666a18-eca0-4cd4-88f5-067cae31fb51",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "243ea376-4e3f-4d03-8b30-fd36de392a32",
+    "cycleWeeks": 2,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "1b725ef4-9672-47e0-9692-18aba9054052",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "bb571842-f00b-4036-be6a-1d1118d06142",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "710b0c30-d427-4744-9cfc-c321ad682a23",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "5d7ef368-64fb-43ca-92f4-500b5537ebcf",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "000a4a53-0617-4b8c-b613-fb1543711fec",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "a756348f-89f0-4e0d-af19-1800a980d9e6",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "61fd73b5-0bb2-408a-9b6b-0d88dac251df",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "322db3f5-443f-469b-bc09-c9a43cd11d47",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "9cb41622-11ad-47b0-b821-e769d2e2d751",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "55bde6a3-055d-4b78-a04c-be30c13e8526",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "07d1bf0d-fd44-47c1-adcb-9675e20b9fdf",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "528fa113-171c-4926-83eb-6d60c69ea61b",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "8c73f153-3179-4616-9fd2-08c8fe1bdf74",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  },
+  {
+    "staffId": "874d0c9e-14fd-40ce-bd81-b6882c232721",
+    "cycleWeeks": 1,
+    "cycleStartDate": "2026-01-05",
+    "days": [
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": true,
+        "pm": true
+      },
+      {
+        "am": false,
+        "pm": false
+      },
+      {
+        "am": false,
+        "pm": false
+      }
+    ]
+  }
+]
