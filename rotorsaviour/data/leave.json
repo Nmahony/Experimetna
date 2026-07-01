@@ -1,0 +1,28 @@
+[
+  {
+    "id": "7e03fcf5-8b6b-4867-ae15-3880b51643c2",
+    "staffId": "5c92a623-dd85-444b-b142-65dfdb1cb12e",
+    "startDate": "2026-02-16",
+    "endDate": "2026-02-20",
+    "period": "FULL",
+    "type": "ANNUAL",
+    "notes": "Half-term leave"
+  },
+  {
+    "id": "89d85943-20f8-4b57-ba84-8ff582eda42f",
+    "staffId": "a756348f-89f0-4e0d-af19-1800a980d9e6",
+    "startDate": "2026-02-04",
+    "endDate": "2026-02-04",
+    "period": "PM",
+    "type": "SPA"
+  },
+  {
+    "id": "5b11097c-60a7-4929-a0da-07a5b2172bab",
+    "staffId": "528fa113-171c-4926-83eb-6d60c69ea61b",
+    "startDate": "2026-02-10",
+    "endDate": "2026-02-11",
+    "period": "FULL",
+    "type": "STUDY",
+    "notes": "Course"
+  }
+]
